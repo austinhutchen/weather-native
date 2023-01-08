@@ -13,9 +13,12 @@ export default function App() {
     console.log(input);
   };
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={"fontSize:32"}>Weather</Text>
-      <Image source={require("./assets/favicon.png")} />
+    <SafeAreaView style={styles.head}>
+      <SafeAreaView style={styles.head}>
+        <Text style={"fontSize:32"}>Weather</Text>
+        <Image source={require("./assets/favicon.png")} />
+      </SafeAreaView>
+      <SafeAreaView style={styles.TextInput}>
       <TextInput
         style={styles.TextInput}
         placeholder="Enter your city"
@@ -29,23 +32,30 @@ export default function App() {
           //do something
           handlePress(TextInput);
         }}
-        style={{ color: "black", fontSize: 20 }}
       />
+      </SafeAreaView>
+     
     </SafeAreaView>
   );
 }
+const gap=8;
 // works as a css style sheet
 const styles = StyleSheet.create({
-  container: {
-    // flex is set to 1 to allow for resizing to fit screen
+// logo and image
+  head: {
     flex: 1,
+    backgroundColor: "white",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: 0,
+  },
+  // input and submit button as one unit
+  TextInput: {
+    margin: 0,
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
-  },
-  TextInput: {
-    margin: 20,
-    backgroundColor: "white",
-    borderWidth: 2,
+    borderWidth: 1,
   },
 });
