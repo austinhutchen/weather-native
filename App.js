@@ -1,7 +1,6 @@
 import {
   StyleSheet,
   Text,
-  View,
   SafeAreaView,
   Button,
   Image,
@@ -43,7 +42,7 @@ const gap=8;
 const styles = StyleSheet.create({
 // logo and image
   head: {
-    flex: 1,
+    flex: 1, 
     backgroundColor: "white",
     flexDirection: "column",
     alignItems: "center",
