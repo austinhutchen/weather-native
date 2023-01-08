@@ -16,11 +16,12 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Text style={"fontSize:32"}>Weather</Text>
       <Image source={require("./assets/favicon.png")} />
-      <TextInput style={styles.TextInput}
-      placeholder="Enter your city"
-      multiline={true}
-      autoCapitalize={true}
-      autoComplete={true}
+      <TextInput
+        style={styles.TextInput}
+        placeholder="Enter your city"
+        multiline={true}
+        autoCapitalize={true}
+        autoComplete={true}
       ></TextInput>
       <Button
         title="Submit"
@@ -42,9 +43,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  TextInput:{
-    margin:20,
+  TextInput: {
+    margin: 20,
     backgroundColor: "white",
-    borderWidth:2
-  }
+    borderWidth: 2,
+  },
 });
