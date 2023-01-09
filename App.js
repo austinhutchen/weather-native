@@ -22,13 +22,14 @@ const App = () => {
   const [city, setCity] = useState("");
   return (
     <SafeAreaView style={styles.head}>
-      <SafeAreaView style={styles.head}>
+      <SafeAreaView style={styles.body}>
       <WeatherScroll />
-        <Text style={"fontSize:20"}>Weather</Text>
-        <Image source={require("./assets/favicon.png")} />
+        
         
       </SafeAreaView>
-      <SafeAreaView style={styles.TextInput}>
+      <SafeAreaView style={styles.head}>
+      <Text style={"fontSize:20"}>Weather</Text>
+        <Image source={require("./assets/favicon.png")} />
         <TextInput
           name="input"
           placeholder="Enter your city"

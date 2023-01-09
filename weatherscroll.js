@@ -1,6 +1,6 @@
 import React from 'react'
 import {View, ScrollView, Image, Text} from 'react-native'
-
+import {styles} from './styles'
 const WeatherScroll=()=>{
 return(
  <ScrollView>
