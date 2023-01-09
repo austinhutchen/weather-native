@@ -9,11 +9,10 @@ import {
 } from "react-native";
 import { useState } from "react";
 import { styles } from "./styles";
-
-
+import WeatherScroll from "./weatherscroll";
 
 function searchAPI(city) {
-  
+  var key = "76875c2ba9d949cbf7e9c0e76057de73";
 }
 
 const App = () => {
@@ -24,8 +23,10 @@ const App = () => {
   return (
     <SafeAreaView style={styles.head}>
       <SafeAreaView style={styles.head}>
-        <Text style={"fontSize:32"}>Weather</Text>
+      <WeatherScroll />
+        <Text style={"fontSize:20"}>Weather</Text>
         <Image source={require("./assets/favicon.png")} />
+        
       </SafeAreaView>
       <SafeAreaView style={styles.TextInput}>
         <TextInput
@@ -37,17 +38,18 @@ const App = () => {
           autoComplete={true}
           blurOnSubmit={true}
           defaultValue={city}
-          onChangeText={newcity => setCity(newcity)}
+          onChangeText={(newcity) => setCity(newcity)}
         ></TextInput>
         <Button
           title="submit"
           // after input finishes, the city variable will have the final input
           onPress={() => {
-          if(typeof(city)!=="undefined"){console.log(city)}
-          else{
-            console.log("EMPTY INPUT")
-          }
-        }}
+            if (typeof city !== "undefined") {
+              console.log(city);
+            } else {
+              console.log("EMPTY INPUT");
+            }
+          }}
         />
       </SafeAreaView>
     </SafeAreaView>
