@@ -5,12 +5,20 @@ import {
   Button,
   Image,
   TextInput,
+  TouchableOpacityBase,
 } from "react-native";
+import { useState } from "react";
+import { styles } from "./styles";
 
-export default function App() {
-  const submit = (input) => {
-    console.log(input);
-  };
+function searchAPI() {
+  // searches for the given city instantiated with this.city. Not case sensitive, uses external API.
+}
+
+const App = () => {
+  // below is in testing
+  // state uses array at index 0 for current value and index 1 for updating variable
+  // hook declaration
+  const [city, setCity] = useState("");
   return (
     <SafeAreaView style={styles.head}>
       <SafeAreaView style={styles.head}>
@@ -18,45 +26,25 @@ export default function App() {
         <Image source={require("./assets/favicon.png")} />
       </SafeAreaView>
       <SafeAreaView style={styles.TextInput}>
-      <TextInput
-        style={styles.TextInput}
-        placeholder="Enter your city"
-        multiline={false}
-        maxLength={20}
-        autoCapitalize={true}
-        autoComplete={true}
-        onSubmitEditing={(value)=>submit(value)}
-      ></TextInput>
-      <Button
-        title="Submit"
-        onPress={() => {
-          //do something
-          submit(TextInput);
-        }}
-      />
+        <TextInput
+          name="input"
+          placeholder="Enter your city"
+          multiline={false}
+          maxLength={20}
+          autoCapitalize={true}
+          autoComplete={true}
+          blurOnSubmit={true}
+          onChangeText={newcity => setCity(newcity)}
+          defaultValue={city}
+        ></TextInput>
+        <Button
+          title="submit"
+          // after input finishes, the city variable will have the final input
+          onPress={() => console.log(city)}
+        />
       </SafeAreaView>
-     
     </SafeAreaView>
   );
-}
-const gap=8;
-// works as a css style sheet
-const styles = StyleSheet.create({
-// logo and image
-  head: {
-    flex: 1, 
-    backgroundColor: "white",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    margin: 0,
-  },
-  // input and submit button as one unit
-  TextInput: {
-    margin: 0,
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-  },
-});
+};
+
+export default App;
