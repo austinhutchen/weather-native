@@ -4,7 +4,7 @@ import {styles} from './styles'
 
 const WeatherScroll=()=>{
 return(
- <ScrollView style={styles.ScrollView}>
+ <ScrollView horizontal={true}style={styles.ScrollView}>
 <CurrentTemp/>
  </ScrollView>
 )
@@ -15,12 +15,12 @@ return(
 const CurrentTemp=()=>{
  const img ={uri : 'https://openweathermap.org/img/wn/10d@2x.png'}
  return(
-  <View>
+  <View style={styles.CurrentTempContainer}>
    <Image source={img} style={styles.image}/>
-   <View>
-    <Text>Sunday</Text>
-    <Text>Night - 28&#176;C</Text>
-    <Text>Day - 30&#176;C</Text>
+   <View style={styles.othercontainer}>
+    <Text style={styles.day}>Sunday</Text>
+    <Text style={styles.temp}>Night - 28&#176;C</Text>
+    <Text style={styles.temp}>Day - 30&#176;C</Text>
    </View>
   </View>
  )
