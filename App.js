@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 export default function App() {
-  const handlePress = (input) => {
+  const submit = (input) => {
     console.log(input);
   };
   return (
@@ -21,15 +21,17 @@ export default function App() {
       <TextInput
         style={styles.TextInput}
         placeholder="Enter your city"
-        multiline={true}
+        multiline={false}
+        maxLength={20}
         autoCapitalize={true}
         autoComplete={true}
+        onSubmitEditing={(value)=>submit(value)}
       ></TextInput>
       <Button
         title="Submit"
         onPress={() => {
           //do something
-          handlePress(TextInput);
+          submit(TextInput);
         }}
       />
       </SafeAreaView>
