@@ -17,10 +17,10 @@ const CurrentTemp=()=>{
  return(
   <View style={styles.CurrentTempContainer}>
    <Image source={img} style={styles.image}/>
-   <View style={styles.othercontainer}>
-    <Text style={styles.day}>Sunday</Text>
-    <Text style={styles.temp}>Night - 28&#176;C</Text>
-    <Text style={styles.temp}>Day - 30&#176;C</Text>
+   <View style={styles.otherContainer}>
+    <Text style={styles.day}>Monday</Text>
+    <Text style={styles.temp}>Night - 55&#176;C</Text>
+    <Text style={styles.temp}>Day - 50&#176;C</Text>
    </View>
   </View>
  )

@@ -55,8 +55,13 @@ const styles = StyleSheet.create({
   borderColor:'#eee',
   borderWidth:1,
  },
- OtherContainer:{
+ otherContainer:{
+ paddingRight:40,
 
+ },
+ Futureforecast:{
+  justifyContent:'center',
+  backgroundColor: '#00000033'
  },
  day:{
   fontsize:20,
