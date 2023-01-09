@@ -10,8 +10,10 @@ import {
 import { useState } from "react";
 import { styles } from "./styles";
 
-function searchAPI() {
-  // searches for the given city instantiated with this.city. Not case sensitive, uses external API.
+
+
+function searchAPI(city) {
+  
 }
 
 const App = () => {
@@ -34,13 +36,18 @@ const App = () => {
           autoCapitalize={true}
           autoComplete={true}
           blurOnSubmit={true}
-          onChangeText={newcity => setCity(newcity)}
           defaultValue={city}
+          onChangeText={newcity => setCity(newcity)}
         ></TextInput>
         <Button
           title="submit"
           // after input finishes, the city variable will have the final input
-          onPress={() => console.log(city)}
+          onPress={() => {
+          if(typeof(city)!=="undefined"){console.log(city)}
+          else{
+            console.log("EMPTY INPUT")
+          }
+        }}
         />
       </SafeAreaView>
     </SafeAreaView>
