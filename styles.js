@@ -33,8 +33,18 @@ const styles = StyleSheet.create({
   alignItems: "center",
   justifyContent: "left",
   margin: 60,
-  paddingVertical: 60,
+  paddingVertical: 10,
   paddingHorizontal: 0,
+ },
+ image:{
+  scrollview:{
+    backgroundcolor: '#18181bcc',
+    padding:0,
+    flex:0.4
+  },
+  width:150,
+  height:150,
+
  }
 });
 
