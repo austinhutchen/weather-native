@@ -45,7 +45,7 @@ const App = () => {
           title="submit"
           // after input finishes, the city variable will have the final input
           onPress={() => {
-            if (typeof city !== "undefined") {
+            if (typeof (city) !== "undefined") {
               console.log(city);
             } else {
               console.log("EMPTY INPUT");
