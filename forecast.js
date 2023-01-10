@@ -4,7 +4,7 @@ import { styles } from "./styles";
 
 const FutureForecast = () => {
   return (
-    <View style={{ flexDirection: "row" }}>
+    <View style= {{flexDirection:'row'}}>
       <Forecastitem/>
     </View>
   );
@@ -40,11 +40,13 @@ const Forecastitem = () => {
 
   const img = { uri: "https://openweathermap.org/img/wn/10d@2x.png" };
   return (
-    <View style={styles.FutureForecast}>
-      <Text style={styles.day}>{nextdy}</Text>
+    <View style={styles.CurrentTempContainer}>
       <Image source={img} style={styles.image} />
-      <Text styles={styles.temp}>50&#176;C</Text>
-      <Text styles={styles.temp}>50&#176;C</Text>
+      <View style ={styles.otherContainer}>
+      <Text style={styles.day}>{nextdy}</Text>
+      <Text styles={styles.temp}>Day - 50&#176;C</Text>
+      <Text styles={styles.temp}> Night - 50&#176;C</Text>
+      </View>
     </View>
   );
 };

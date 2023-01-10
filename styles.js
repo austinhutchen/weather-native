@@ -45,17 +45,7 @@ const styles = StyleSheet.create({
   otherContainer: {
     paddingRight: 30,
   },
-  Futureforecast: {
-    flex:1,
-    justifyContent: "center",
-    backgroundColor: "#00000033",
-    borderRadius:10,
-    borderColor: "#eee",
-    borderWidth: 1,
-    padding:20,
-    marginLeft:10,
 
-  },
   day: {
     fontsize: 20,
     color: "white",

@@ -7,7 +7,9 @@ const WeatherScroll = () => {
   return (
     <ScrollView horizontal={true} style={styles.scrollView}>
       <CurrentTemp />
-      <FutureForecast></FutureForecast>
+      <FutureForecast/>
+      <FutureForecast/>
+      <FutureForecast/>
     </ScrollView>
   );
 };
