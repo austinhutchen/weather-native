@@ -23,12 +23,10 @@ const App = () => {
   return (
     <SafeAreaView style={styles.head}>
       <SafeAreaView style={styles.body}>
-      <WeatherScroll />
-
-        
+        <WeatherScroll />
       </SafeAreaView>
       <SafeAreaView style={styles.head}>
-      <Text style={"fontSize:20"}>Weather</Text>
+        <Text style={"fontSize:20"}>Weather</Text>
         <Image source={require("./assets/favicon.png")} />
         <TextInput
           name="input"
@@ -45,7 +43,7 @@ const App = () => {
           title="submit"
           // after input finishes, the city variable will have the final input
           onPress={() => {
-            if (typeof (city) !== "undefined") {
+            if (typeof city !== "undefined") {
               console.log(city);
             } else {
               console.log("EMPTY INPUT");
