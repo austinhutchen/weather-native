@@ -11,8 +11,11 @@ import { useState } from "react";
 import { styles } from "./styles";
 import WeatherScroll from "./weatherscroll";
 import FutureForecast from "./forecast";
+
 function searchAPI(city) {
   var key = "76875c2ba9d949cbf7e9c0e76057de73";
+  
+
 }
 
 const App = () => {
@@ -26,7 +29,7 @@ const App = () => {
         <WeatherScroll />
       </SafeAreaView>
       <SafeAreaView style={styles.head}>
-        <Text style={"fontSize:20"}>Weather</Text>
+        <Text style={"fontSize:40"}>Find More Weather:</Text>
         <Image source={require("./assets/favicon.png")} />
         <TextInput
           name="input"
