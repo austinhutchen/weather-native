@@ -9,12 +9,13 @@ const FutureForecast = () => {
     </View>
   );
 };
-
+var counter=0;
 const Forecastitem = () => {
+  counter++;
   const today = new Date();
   day = today.getDay();
   var nextdy = "";
-  switch (day+1) {
+  switch (day+counter) {
     case 0:
       nextdy = "Sunday";
       break;
@@ -44,8 +45,9 @@ const Forecastitem = () => {
       <Image source={img} style={styles.image} />
       <View style ={styles.otherContainer}>
       <Text style={styles.day}>{nextdy}</Text>
+      <Text styles={styles.temp}> Night - 55&#176;C</Text>
       <Text styles={styles.temp}>Day - 50&#176;C</Text>
-      <Text styles={styles.temp}> Night - 50&#176;C</Text>
+
       </View>
     </View>
   );
