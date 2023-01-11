@@ -7,7 +7,7 @@ import {
   TextInput,
   TouchableOpacityBase,
 } from "react-native";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { styles } from "./styles";
 import WeatherScroll from "./weatherscroll";
 import FutureForecast from "./forecast";
@@ -19,10 +19,10 @@ function searchAPI(city) {
 }
 
 const App = () => {
-  // below is in testing
-  // state uses array at index 0 for current value and index 1 for updating variable
-  // hook declaration
+  // hook declarations
   const [city, setCity] = useState("");
+
+  
   return (
     <SafeAreaView style={styles.head}>
       <SafeAreaView style={styles.body}>
