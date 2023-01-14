@@ -21,3 +21,9 @@ export function findday(counter) {
  }
 } 
 
+export function searchAPI(city) {
+  // searches the given API for weather at city
+  var key = "76875c2ba9d949cbf7e9c0e76057de73";
+  
+
+}

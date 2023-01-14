@@ -9,20 +9,12 @@ import {
 } from "react-native";
 import { useState, useEffect } from "react";
 import { styles } from "./styles";
-import WeatherScroll from "./weatherscroll";
-import FutureForecast from "./forecast";
-
-function searchAPI(city) {
-  var key = "76875c2ba9d949cbf7e9c0e76057de73";
-  
-
-}
+import WeatherScroll from "./weatherscroll"; 
 
 const App = () => {
   // hook declarations
   const [city, setCity] = useState("");
 
-  
   return (
     <SafeAreaView style={styles.head}>
       <SafeAreaView style={styles.body}>

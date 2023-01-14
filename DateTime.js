@@ -7,6 +7,7 @@ return(
  <View style={styles.WeatherItem}>
 <Text style={styles.WeatherItemTitle}>{title}</Text>
 <Text style={styles.WeatherItemTitle}>{value}{unit}</Text> 
+
  </View>
 
 
