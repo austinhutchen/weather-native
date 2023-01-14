@@ -10,6 +10,7 @@ import {
 import { useState, useEffect } from "react";
 import { styles } from "./styles";
 import WeatherScroll from "./weatherscroll"; 
+import { searchAPI } from "./helpers";
 
 const App = () => {
   // hook declarations
@@ -39,6 +40,9 @@ const App = () => {
           // after input finishes, the city variable will have the final input
           onPress={() => {
             if (typeof city !== "undefined") {
+              // search API function should call here to search for city weather on submit
+              searchAPI(city);
+              // for debugging
               console.log(city);
             } else {
               console.log("EMPTY INPUT");
