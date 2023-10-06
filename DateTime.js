@@ -3,6 +3,7 @@ import {View,Text, Stylesheet} from 'react-native'
 import { styles } from './styles'
 
 const WeatherItem= ({title,value,unit})=>{
+
 return(
  <View style={styles.WeatherItem}>
 <Text style={styles.WeatherItemTitle}>{title}</Text>
@@ -16,9 +17,14 @@ return(
 
 }
 
-const DateTime=() =>{
+const DateTime=async() =>{
 const [date,SetDate]=useState('');
 const [time,setTime]= useState('');
+  let url = "";
+  await axios.get(url).then(response)=>{
+let _data=  response.toJSON();
+}
+this.setDate(_data.toJSON());
 
 
 

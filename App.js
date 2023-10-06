@@ -15,7 +15,6 @@ import { searchAPI } from "./helpers";
 const App = () => {
   // hook declarations
   const [city, setCity] = useState("");
-
   return (
     <SafeAreaView style={styles.head}>
       <SafeAreaView style={styles.body}>
@@ -42,7 +41,7 @@ const App = () => {
             if (typeof city !== "undefined") {
               // search API function should call here to search for city weather on submit
               searchAPI(city);
-              // for debugging
+              // for debugging, delete when done
               console.log(city);
             } else {
               console.log("EMPTY INPUT");
